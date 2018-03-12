@@ -14,10 +14,10 @@ public class Main extends Application {
 			
 			
 			HBox root = new StartScreen();
-			Scene scene = new Scene(root,1000,1000);
+			Scene scene = new Scene(root,950,800);
 			scene.getStylesheets().add(getClass().getResource("css/application.css").toExternalForm());
 
-			primaryStage.setTitle(GameConstants.GAMENAME);
+			primaryStage.setTitle(GameConstants.LAUNCHERNAME);
 			primaryStage.setScene(scene);
 
 			
