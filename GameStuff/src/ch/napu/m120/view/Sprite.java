@@ -15,11 +15,15 @@ public class Sprite
 
     public Sprite(Image i)
     {
-    	image = i;
+    	this.setImage(i);
         positionX = 0;
         positionY = 0;    
         velocityX = 0;
         velocityY = 0;
+    }
+    public Sprite(String filename) {
+        Image i = new Image(filename);
+        this.setImage(i);
     }
 
     public void setImage(Image i)

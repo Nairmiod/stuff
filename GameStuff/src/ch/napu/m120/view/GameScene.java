@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import ch.napu.m120.controller.GameHandler;
 import ch.napu.m120.controller.InputDownHandler;
 import ch.napu.m120.controller.InputUpHandler;
+import ch.napu.m120.model.Globals;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -23,8 +24,8 @@ public class GameScene extends Scene {
 		this.setOnKeyReleased(new InputUpHandler());
 
 			
-		Canvas canvas = new Canvas(512, 512);
-		game.getChildren().add(canvas);
+		Globals.gameArea = new Canvas(512, 512);
+		game.getChildren().add(Globals.gameArea);
 
 
 

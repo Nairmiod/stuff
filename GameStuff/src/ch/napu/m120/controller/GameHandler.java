@@ -1,10 +1,8 @@
 package ch.napu.m120.controller;
 
-import java.util.ArrayList;
 
 import ch.napu.m120.model.Globals;
 import ch.napu.m120.model.Input;
-import ch.napu.m120.model.LongValue;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
 
@@ -19,9 +17,10 @@ public class GameHandler extends AnimationTimer {
 		
 	}
 
-	public void handle(long current) {
+	public void handle(long now) {
+		this.lastNanoTime = now;
 		
-		this.currentNanoTime = current;
+		this.currentNanoTime = System.nanoTime();
 		
 		// calculate time since last update.
 		double elapsedTime = (currentNanoTime - lastNanoTime) / 1000000000.0;
@@ -44,7 +43,7 @@ public class GameHandler extends AnimationTimer {
 		// collision detection
 
 		// render
-		GraphicsContext gc = canvas.getGraphicsContext2D();
+		GraphicsContext gc = Globals.gameArea.getGraphicsContext2D();
 		gc.clearRect(0, 0, 512, 512);
 		Globals.player.render(gc);
 
