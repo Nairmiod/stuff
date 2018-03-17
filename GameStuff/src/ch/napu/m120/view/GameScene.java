@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import ch.napu.m120.controller.GameHandler;
 import ch.napu.m120.controller.InputDownHandler;
 import ch.napu.m120.controller.InputUpHandler;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.input.KeyEvent;
+
+
 
 public class GameScene extends Scene {
 
@@ -27,9 +26,9 @@ public class GameScene extends Scene {
 		Canvas canvas = new Canvas(512, 512);
 		game.getChildren().add(canvas);
 
-		GraphicsContext gc = canvas.getGraphicsContext2D();
 
-		new GameHandler(input).start();
+
+		new GameHandler().start();
 
 	}
 

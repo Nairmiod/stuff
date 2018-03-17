@@ -19,9 +19,10 @@ public class Main extends Application {
 
 			primaryStage.setTitle(GameConstants.LAUNCHERNAME);
 			primaryStage.setScene(scene);
-
+			
 			
 			primaryStage.show();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

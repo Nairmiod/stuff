@@ -2,48 +2,51 @@ package ch.napu.m120.controller;
 
 import java.util.ArrayList;
 
+import ch.napu.m120.model.Globals;
+import ch.napu.m120.model.Input;
 import ch.napu.m120.model.LongValue;
 import javafx.animation.AnimationTimer;
+import javafx.scene.canvas.GraphicsContext;
 
 public class GameHandler extends AnimationTimer {
 
 	private Long currentNanoTime;
-	private ArrayList<String> input;
+	private Long lastNanoTime;
 
-
-	public GameHandler(ArrayList<String> input) {
+	public GameHandler() {
 		super();
-		this.input = input;
+		
 		
 	}
 
-	@Override
 	public void handle(long current) {
-		Object lastNanoTime;
+		
+		this.currentNanoTime = current;
+		
 		// calculate time since last update.
-		double elapsedTime = (currentNanoTime - (long) (lastNanoTime)) / 1000000000.0;
+		double elapsedTime = (currentNanoTime - lastNanoTime) / 1000000000.0;
 		lastNanoTime = currentNanoTime;
 
 		// game logic
 
-		briefcase.setVelocity(0, 0);
-		if (input.contains("LEFT"))
-			briefcase.addVelocity(-200, 0);
-		if (input.contains("RIGHT"))
-			briefcase.addVelocity(200, 0);
-		if (input.contains("UP"))
-			briefcase.addVelocity(0, -200);
-		if (input.contains("DOWN"))
-			briefcase.addVelocity(0, 200);
+		Globals.player.setVelocity(0, 0);
+		if (Input.contains("LEFT"))
+			Globals.player.addVelocity(-200, 0);
+		if (Input.contains("RIGHT"))
+			Globals.player.addVelocity(200, 0);
+		if (Input.contains("UP"))
+			Globals.player.addVelocity(0, -200);
+		if (Input.contains("DOWN"))
+			Globals.player.addVelocity(0, 200);
 
-		briefcase.update(elapsedTime);
+		Globals.player.update(elapsedTime);
 
 		// collision detection
 
 		// render
-
+		GraphicsContext gc = canvas.getGraphicsContext2D();
 		gc.clearRect(0, 0, 512, 512);
-		briefcase.render(gc);
+		Globals.player.render(gc);
 
 	}
 

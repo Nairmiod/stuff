@@ -13,8 +13,9 @@ public class Sprite
     private double width;
     private double height;
 
-    public Sprite()
+    public Sprite(Image i)
     {
+    	image = i;
         positionX = 0;
         positionY = 0;    
         velocityX = 0;
