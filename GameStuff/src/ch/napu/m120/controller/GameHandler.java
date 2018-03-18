@@ -2,7 +2,7 @@ package ch.napu.m120.controller;
 
 
 import ch.napu.m120.model.Globals;
-import ch.napu.m120.model.Input;
+import ch.napu.m120.view.Sprite;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
 
@@ -13,8 +13,7 @@ public class GameHandler extends AnimationTimer {
 
 	public GameHandler() {
 		super();
-		
-		
+		Globals.player = new Sprite("briefcase.png");
 	}
 
 	public void handle(long now) {
@@ -29,13 +28,13 @@ public class GameHandler extends AnimationTimer {
 		// game logic
 
 		Globals.player.setVelocity(0, 0);
-		if (Input.contains("LEFT"))
+		if (Globals.inputs.contains("A"))
 			Globals.player.addVelocity(-200, 0);
-		if (Input.contains("RIGHT"))
+		if (Globals.inputs.contains("D"))
 			Globals.player.addVelocity(200, 0);
-		if (Input.contains("UP"))
+		if (Globals.inputs.contains("W"))
 			Globals.player.addVelocity(0, -200);
-		if (Input.contains("DOWN"))
+		if (Globals.inputs.contains("S"))
 			Globals.player.addVelocity(0, 200);
 
 		Globals.player.update(elapsedTime);

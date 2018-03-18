@@ -2,7 +2,7 @@ package ch.napu.m120.view;
 
 import java.util.ArrayList;
 
-import ch.napu.m120.controller.GameHandler;
+
 import ch.napu.m120.controller.InputDownHandler;
 import ch.napu.m120.controller.InputUpHandler;
 import ch.napu.m120.model.Globals;
@@ -29,7 +29,7 @@ public class GameScene extends Scene {
 
 
 
-		new GameHandler().start();
+		
 
 	}
 

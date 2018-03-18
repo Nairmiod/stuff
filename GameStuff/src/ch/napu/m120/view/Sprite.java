@@ -21,6 +21,8 @@ public class Sprite
         velocityX = 0;
         velocityY = 0;
     }
+
+    
     public Sprite(String filename) {
         Image i = new Image(filename);
         this.setImage(i);

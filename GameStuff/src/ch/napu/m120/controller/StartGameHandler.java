@@ -8,21 +8,19 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 public class StartGameHandler implements EventHandler<ActionEvent> {
 
 	@Override
 	public void handle(ActionEvent event) {
-		
 
-        Group game =  new Group();
-        Scene gameScene = new GameScene(game, 230, 100);
-        Stage newWindow = new Stage();
+		Group game = new Group();
+		Scene gameScene = new GameScene(game, 230, 100);
+		Stage newWindow = new Stage();
 
+		newWindow.setTitle(GameConstants.GAMENAME);
+		newWindow.setScene(gameScene);
+		new GameHandler().start();
+		newWindow.show();
 
-        newWindow.setTitle(GameConstants.GAMENAME);
-        newWindow.setScene(gameScene);
-        newWindow.show();
-		
-    }
+	}
 }
