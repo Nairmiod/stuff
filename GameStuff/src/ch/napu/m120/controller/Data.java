@@ -3,6 +3,7 @@ package ch.napu.m120.controller;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,14 +16,15 @@ public class Data {
 	private static String connectionString = "jdbc:mysql://localhost/score?useSSL=false";
 	private static String connectionUser = "root";
 	private static String connectionPassword = "";
+	private static Connection conn;
 
 	public static void load() {
 		try {
 
-			Class.forName("com.mysql.jdbc.Driver");
+			if (conn == null)
+				openConnection();
 
 			scores = new ArrayList<Score>();
-			Connection conn = DriverManager.getConnection(connectionString, connectionUser, connectionPassword);
 
 			Statement stat = conn.createStatement();
 
@@ -40,7 +42,6 @@ public class Data {
 
 			rs.close();
 			stat.close();
-			conn.close();
 
 		} catch (Exception e) {
 
@@ -52,5 +53,25 @@ public class Data {
 	public static void sortByTime() {
 
 		Collections.sort(scores);
+	}
+
+	public static void save(Score s) throws ClassNotFoundException, SQLException {
+
+		if (conn == null)
+			openConnection();
+		Statement stat = conn.createStatement();
+		stat.executeQuery("INSERT INTO score (scrName,scrScore) VALUES ('"+s.getName()+"',"+s.getScore()+")");
+
+		
+		
+	}
+
+	public static void openConnection() throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.jdbc.Driver");
+		conn = DriverManager.getConnection(connectionString, connectionUser, connectionPassword);
+	}
+
+	public static void closeConnection() throws SQLException {
+		conn.close();
 	}
 }

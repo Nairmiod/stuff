@@ -12,6 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Rankings extends TableView<Score> {
 
+	
 	public Rankings(int kind) {
 		super();
 
