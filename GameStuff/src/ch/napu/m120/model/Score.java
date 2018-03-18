@@ -54,23 +54,19 @@ public class Score implements Comparable<Score> {
 		this.time = time;
 	}
 
-
 	@Override
 	public int compareTo(Score o) {
-		
+
 		Date s1 = this.getTime();
 		Date s2 = o.getTime();
-		 if (s1.before(s2)) {
+		if (s1.before(s2)) {
 			return 1;
 		} else if (s1.after(s2)) {
 			return -1;
 		} else {
 			return 0;
 		}
-		
-		
+
 	}
-	
-	
 
 }

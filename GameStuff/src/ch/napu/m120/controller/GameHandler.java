@@ -1,6 +1,5 @@
 package ch.napu.m120.controller;
 
-
 import ch.napu.m120.model.Globals;
 import ch.napu.m120.view.Sprite;
 import javafx.animation.AnimationTimer;
@@ -18,9 +17,9 @@ public class GameHandler extends AnimationTimer {
 
 	public void handle(long now) {
 		this.lastNanoTime = now;
-		
+
 		this.currentNanoTime = System.nanoTime();
-		
+
 		// calculate time since last update.
 		double elapsedTime = (currentNanoTime - lastNanoTime) / 1000000000.0;
 		lastNanoTime = currentNanoTime;

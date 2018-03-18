@@ -10,5 +10,5 @@ public class Globals {
 	public static Sprite player;
 	public static Canvas gameArea;
 	public static ArrayList<String> inputs = new ArrayList<String>();
-	
+
 }
