@@ -60,10 +60,8 @@ public class Data {
 		if (conn == null)
 			openConnection();
 		Statement stat = conn.createStatement();
-		stat.executeQuery("INSERT INTO score (scrName,scrScore) VALUES ('"+s.getName()+"',"+s.getScore()+")");
+		stat.executeQuery("INSERT INTO score (scrName,scrScore) VALUES ('" + s.getName() + "'," + s.getScore() + ")");
 
-		
-		
 	}
 
 	public static void openConnection() throws SQLException, ClassNotFoundException {
