@@ -33,7 +33,7 @@ public class Rankings extends TableView<Score> {
 		this.getColumns().add(ScoreCol);
 		
 		Data.load();
-		Data.sortByTime();
+
 
 
 		if (kind == 0) {
@@ -48,7 +48,7 @@ public class Rankings extends TableView<Score> {
 			
 		} else if (kind == 1) {
 			this.setItems(RecentScoreObservableList.get());
-			
+			Data.sortByTime();
 			for (int i = 0; i < 10 && i<Data.scores.size(); i++) {
 				RecentScoreObservableList.get().add(Data.scores.get(i));
 			}
