@@ -5,13 +5,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.geometry.Rectangle2D;
 
 public class Sprite {
-	private Image image;
-	private double positionX;
-	private double positionY;
-	private double velocityX;
-	private double velocityY;
-	private double width;
-	private double height;
+	protected Image image;
+	protected double positionX;
+	protected double positionY;
+	protected double velocityX;
+	protected double velocityY;
+	protected double width;
+	protected double height;
 
 	public Sprite(Image i) {
 		this.setImage(i);
@@ -22,14 +22,19 @@ public class Sprite {
 	}
 
 	public Sprite(String filename) {
-		Image i = new Image(filename);
-		this.setImage(i);
+		this.setImage(new Image(filename));
+		positionX = 0;
+		positionY = 0;
+		velocityX = 0;
+		velocityY = 0;
+
 	}
 
 	public void setImage(Image i) {
 		image = i;
 		width = i.getWidth();
 		height = i.getHeight();
+
 	}
 
 	public void setImage(String filename) {

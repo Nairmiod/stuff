@@ -14,12 +14,14 @@ public class StartGameHandler implements EventHandler<ActionEvent> {
 	public void handle(ActionEvent event) {
 
 		Group game = new Group();
-		Scene gameScene = new GameScene(game, 230, 100);
+		Scene gameScene = new GameScene(game, GameConstants.SCENE_WIDTH, GameConstants.SCENE_HEIGHT);
 		Stage newWindow = new Stage();
 
+		
 		newWindow.setTitle(GameConstants.GAMENAME);
 		newWindow.setScene(gameScene);
-		new GameHandler().start();
+		GameHandler handler = new GameHandler();
+		handler.start();
 		newWindow.show();
 
 	}

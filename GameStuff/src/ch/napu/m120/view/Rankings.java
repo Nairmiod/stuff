@@ -1,7 +1,6 @@
 package ch.napu.m120.view;
 
-import ch.napu.m120.controller.Data;
-
+import ch.napu.m120.model.Data;
 import ch.napu.m120.model.RecentScoreObservableList;
 import ch.napu.m120.model.Score;
 import ch.napu.m120.model.TopScoreObservableList;
