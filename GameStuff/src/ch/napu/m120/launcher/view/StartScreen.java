@@ -1,6 +1,6 @@
-package ch.napu.m120.view;
+package ch.napu.m120.launcher.view;
 
-import ch.napu.m120.ressources.GameConstants;
+import ch.napu.m120.shared.ressources.GameConstants;
 import javafx.scene.layout.HBox;
 
 public class StartScreen extends HBox {

@@ -1,17 +1,15 @@
-package ch.napu.m120.view;
+package ch.napu.m120.launcher.view;
 
-import ch.napu.m120.model.Data;
-import ch.napu.m120.model.RecentScoreObservableList;
-import ch.napu.m120.model.Score;
-import ch.napu.m120.model.TopScoreObservableList;
-
+import ch.napu.m120.launcher.model.RecentScoreObservableList;
+import ch.napu.m120.launcher.model.TopScoreObservableList;
+import ch.napu.m120.shared.model.Data;
+import ch.napu.m120.shared.model.Score;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Rankings extends TableView<Score> {
 
-	
 	public Rankings(int kind) {
 		super();
 

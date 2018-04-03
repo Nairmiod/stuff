@@ -1,11 +1,10 @@
-package ch.napu.m120.controller;
+package ch.napu.m120.game.controller;
 
-import ch.napu.m120.model.Globals;
-import ch.napu.m120.ressources.GameConstants;
-import ch.napu.m120.view.Player;
+import ch.napu.m120.game.view.Player;
+import ch.napu.m120.shared.model.Globals;
+import ch.napu.m120.shared.ressources.GameConstants;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
-
 
 public class GameHandler extends AnimationTimer {
 
@@ -14,15 +13,13 @@ public class GameHandler extends AnimationTimer {
 	int help = 0;
 	private Player player = new Player("briefcase.png");
 
-
 	public GameHandler() {
 		super();
-		
+
 	}
 
 	public void handle(long now) {
 
-		
 		this.lastNanoTime = now;
 
 		this.currentNanoTime = System.nanoTime();

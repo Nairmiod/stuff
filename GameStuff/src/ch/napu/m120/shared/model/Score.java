@@ -1,4 +1,4 @@
-package ch.napu.m120.model;
+package ch.napu.m120.shared.model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

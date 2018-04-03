@@ -1,4 +1,4 @@
-package ch.napu.m120.model;
+package ch.napu.m120.shared.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -56,6 +56,7 @@ public class Data {
 	public static void save(Score s) throws ClassNotFoundException, SQLException {
 
 		if (conn == null)
+
 			openConnection();
 		Statement stat = conn.createStatement();
 		stat.executeQuery("INSERT INTO score (scrName,scrScore) VALUES ('" + s.getName() + "'," + s.getScore() + ")");

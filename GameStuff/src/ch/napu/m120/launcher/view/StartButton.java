@@ -1,6 +1,6 @@
-package ch.napu.m120.view;
+package ch.napu.m120.launcher.view;
 
-import ch.napu.m120.controller.StartGameHandler;
+import ch.napu.m120.launcher.controller.StartGameHandler;
 import javafx.scene.control.Button;
 
 public class StartButton extends Button {

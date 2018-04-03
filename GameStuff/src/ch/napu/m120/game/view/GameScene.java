@@ -1,11 +1,11 @@
-package ch.napu.m120.view;
+package ch.napu.m120.game.view;
 
 import java.util.ArrayList;
 
-import ch.napu.m120.controller.InputDownHandler;
-import ch.napu.m120.controller.InputUpHandler;
-import ch.napu.m120.model.Globals;
-import ch.napu.m120.ressources.GameConstants;
+import ch.napu.m120.game.controller.InputDownHandler;
+import ch.napu.m120.game.controller.InputUpHandler;
+import ch.napu.m120.shared.model.Globals;
+import ch.napu.m120.shared.ressources.GameConstants;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;

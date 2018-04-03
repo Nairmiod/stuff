@@ -1,6 +1,6 @@
-package ch.napu.m120.controller;
+package ch.napu.m120.game.controller;
 
-import ch.napu.m120.model.Globals;
+import ch.napu.m120.shared.model.Globals;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 

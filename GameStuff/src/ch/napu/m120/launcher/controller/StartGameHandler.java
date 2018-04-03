@@ -1,7 +1,8 @@
-package ch.napu.m120.controller;
+package ch.napu.m120.launcher.controller;
 
-import ch.napu.m120.ressources.GameConstants;
-import ch.napu.m120.view.GameScene;
+import ch.napu.m120.game.controller.GameHandler;
+import ch.napu.m120.game.view.GameScene;
+import ch.napu.m120.shared.ressources.GameConstants;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -17,7 +18,6 @@ public class StartGameHandler implements EventHandler<ActionEvent> {
 		Scene gameScene = new GameScene(game, GameConstants.SCENE_WIDTH, GameConstants.SCENE_HEIGHT);
 		Stage newWindow = new Stage();
 
-		
 		newWindow.setTitle(GameConstants.GAMENAME);
 		newWindow.setScene(gameScene);
 		GameHandler handler = new GameHandler();

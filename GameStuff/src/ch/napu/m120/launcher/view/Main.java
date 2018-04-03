@@ -1,6 +1,6 @@
-package ch.napu.m120.view;
+package ch.napu.m120.launcher.view;
 
-import ch.napu.m120.ressources.GameConstants;
+import ch.napu.m120.shared.ressources.GameConstants;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -17,7 +17,7 @@ public class Main extends Application {
 
 			primaryStage.setTitle(GameConstants.LAUNCHERNAME);
 			primaryStage.setScene(scene);
-			
+
 			primaryStage.show();
 
 		} catch (Exception e) {

@@ -1,4 +1,4 @@
-package ch.napu.m120.view;
+package ch.napu.m120.game.view;
 
 import javafx.scene.image.Image;
 import javafx.scene.canvas.GraphicsContext;
