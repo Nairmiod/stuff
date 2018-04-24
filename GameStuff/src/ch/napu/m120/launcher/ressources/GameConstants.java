@@ -1,4 +1,4 @@
-package ch.napu.m120.ressources;
+package ch.napu.m120.launcher.ressources;
 
 public class GameConstants {
 

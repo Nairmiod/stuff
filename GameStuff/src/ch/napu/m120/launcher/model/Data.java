@@ -1,4 +1,4 @@
-package ch.napu.m120.controller;
+package ch.napu.m120.launcher.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
-
-import ch.napu.m120.model.Score;
 
 public class Data {
 

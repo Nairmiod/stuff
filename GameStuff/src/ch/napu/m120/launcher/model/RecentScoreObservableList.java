@@ -1,4 +1,4 @@
-package ch.napu.m120.model;
+package ch.napu.m120.launcher.model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

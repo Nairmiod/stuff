@@ -1,8 +1,7 @@
-package ch.napu.m120.model;
+package ch.napu.m120.launcher.model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
 import java.util.Date;
 
 public class Score implements Comparable<Score> {
