@@ -1,7 +1,6 @@
 package ch.napu.m120.launcher.model;
 
 import ch.napu.m120.launcher.model.TopScoreObservableList;
-import ch.napu.m120.shared.model.Score;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;

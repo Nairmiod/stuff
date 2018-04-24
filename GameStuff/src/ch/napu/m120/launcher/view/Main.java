@@ -12,7 +12,7 @@ public class Main extends Application {
 		try {
 
 			HBox root = new StartScreen();
-			Scene scene = new Scene(root, 950, 300);
+			Scene scene = new Scene(root, 653, 350);
 			scene.getStylesheets().add(getClass().getResource("css/application.css").toExternalForm());
 
 			primaryStage.setTitle(GameConstants.LAUNCHERNAME);

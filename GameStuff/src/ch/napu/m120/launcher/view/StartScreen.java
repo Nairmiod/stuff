@@ -1,10 +1,8 @@
 package ch.napu.m120.launcher.view;
 
-<<<<<<< HEAD
+
 import ch.napu.m120.shared.ressources.GameConstants;
-=======
-import ch.napu.m120.launcher.ressources.GameConstants;
->>>>>>> refs/remotes/origin/master
+
 import javafx.scene.layout.HBox;
 
 public class StartScreen extends HBox {
