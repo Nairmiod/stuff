@@ -1,5 +1,6 @@
 package ch.napu.m120.launcher.view;
 
+import ch.napu.m120.launcher.model.Data;
 import ch.napu.m120.launcher.model.RecentScoreObservableList;
 import ch.napu.m120.launcher.model.TopScoreObservableList;
 import ch.napu.m120.shared.model.Data;
@@ -19,11 +20,11 @@ public class Rankings extends TableView<Score> {
 
 		TableColumn<Score, String> NameCol = new TableColumn<Score, String>("Name");
 		NameCol.setCellValueFactory(new PropertyValueFactory<Score, String>("name"));
-		NameCol.setPrefWidth(200);
+		NameCol.setPrefWidth(100);
 
 		TableColumn<Score, String> ScoreCol = new TableColumn<Score, String>("Score");
 		ScoreCol.setCellValueFactory(new PropertyValueFactory<Score, String>("score"));
-		ScoreCol.setPrefWidth(200);
+		ScoreCol.setPrefWidth(100);
 
 		this.getColumns().add(RankCol);
 		this.getColumns().add(NameCol);

@@ -1,5 +1,6 @@
 package ch.napu.m120.launcher.controller;
 
+<<<<<<< HEAD
 import ch.napu.m120.game.controller.GameHandler;
 import ch.napu.m120.game.view.GameScene;
 import ch.napu.m120.shared.ressources.GameConstants;
@@ -23,6 +24,18 @@ public class StartGameHandler implements EventHandler<ActionEvent> {
 		GameHandler handler = new GameHandler();
 		handler.start();
 		newWindow.show();
+=======
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
+public class StartGameHandler implements EventHandler<ActionEvent> {
+
+	@Override
+	public void handle(ActionEvent event) {
+
+		Game gameScene = new Game();
+		
+>>>>>>> refs/remotes/origin/master
 
 	}
 }

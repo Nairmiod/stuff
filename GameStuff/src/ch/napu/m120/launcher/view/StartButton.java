@@ -9,6 +9,6 @@ public class StartButton extends Button {
 	public StartButton(String name) {
 		super(name);
 		this.setOnAction(new StartGameHandler());
-
+		this.setPrefSize(150, 150);
 	}
 }

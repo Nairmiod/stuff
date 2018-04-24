@@ -1,6 +1,6 @@
 package ch.napu.m120.launcher.view;
 
-import ch.napu.m120.shared.ressources.GameConstants;
+import ch.napu.m120.launcher.ressources.GameConstants;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
